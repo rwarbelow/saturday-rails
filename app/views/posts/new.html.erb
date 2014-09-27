@@ -1,0 +1,16 @@
+<% if @messages %>
+	<% @messages.each do |message| %>
+		<%= message %>
+	<% end %>
+<% end %>
+
+
+<%= form_for(Post.new) do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<br>
+	<%= f.label :body %>
+	<%= f.text_area  :body %>
+	<br>
+	<%= f.submit %>
+<% end %>
